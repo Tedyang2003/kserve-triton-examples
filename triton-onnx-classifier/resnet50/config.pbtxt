@@ -1,0 +1,10 @@
+name: "resnet50"
+backend: "onnxruntime"
+
+# The usage of device is deferred to the vLLM engine
+instance_group [
+  {
+    count: 1
+    kind: KIND_MODEL
+  }
+]

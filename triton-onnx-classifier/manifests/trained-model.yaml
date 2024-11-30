@@ -1,0 +1,10 @@
+apiVersion: "serving.kserve.io/v1alpha1"
+kind: "TrainedModel"
+metadata:
+  name: "resnet50"
+spec:
+  inferenceService: triton-direct-s3-is
+  model:
+    framework: triton
+    storageUri: s3://finalised-models/model-repository/resnet50
+    memory: "5Gi"  
